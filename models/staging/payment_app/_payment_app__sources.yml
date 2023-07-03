@@ -5,4 +5,4 @@ sources:
     database: raw
     schema: payment_app
     tables: 
-      - transactions
+      - name: transactions

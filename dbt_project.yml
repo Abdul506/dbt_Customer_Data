@@ -1,4 +1,3 @@
-
 name: 'dbt_training'
 version: '1.0.0'
 config-version: 2
@@ -12,9 +11,19 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets:         
+target-path: "target" 
+clean-targets: 
   - "target"
   - "dbt_packages"
+
+seeds:
+  dbt_training:
+    sale_dates:
+      +column_types:
+        SALE_DATE: date
+        NAME: varchar
+        DISCOUNT_PERCENT: numeric(18,2)
+
 models:
   dbt_training:
     staging:
@@ -22,4 +31,4 @@ models:
     intermediate:
       +materialized: ephemeral
     marts:
-      +materialized: table 
+      +materialized: table

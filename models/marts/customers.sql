@@ -32,13 +32,15 @@ final as (
         customers_and_locations_joined.city_name,
         customers_and_locations_joined.state_name,
         customers_and_locations_joined.zip_code,
-        employees.full_name as main_employee,
+        nvl(employees.full_name, 'None') as main_employee,
         employees.is_active as main_employee_is_active,
         nvl(order_amounts_by_customer.total_revenue_in_usd, 0) 
             as total_revenue_in_usd,
         nvl(order_amounts_by_customer.total_quantity, 0) as total_quantity,
         customers.created_at,
+        customers.created_at_est,
         customers.updated_at,
+        customers.updated_at_est,
         customers.is_active
 
     from customers

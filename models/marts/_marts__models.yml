@@ -8,10 +8,10 @@ models:
         description: The unique identifier for a single customer.
       - name: created_at_est
         tests: 
-          - not_negative
+          - unique
       - name: updated_at_est
         tests: 
-          - not_negative
+          - unique
 
   - name: orders
     description: '{{ doc("orders_table_description") }}'
@@ -20,4 +20,4 @@ models:
         description: The unique identifier for a single order.
       - name: created_at_est
         tests: 
-          - not_negative
+          - unique

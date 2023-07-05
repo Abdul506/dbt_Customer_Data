@@ -7,7 +7,7 @@ _All source data is loaded to the `RAW` database._
 - `payment_app` - A third party payment processing application
 
 ### Target Environments:
-_All transformed data models are deployed to the `ANALYTICS_###` database._
+_All transformed data models are deployed to the `ANALYTICS_106` database._
 - **Development**
    - Schema: `DBT_AZEIDIEH`
 - **Production**

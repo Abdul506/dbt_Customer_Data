@@ -9,7 +9,7 @@ _All source data is loaded to the `RAW` database._
 ### Target Environments:
 _All transformed data models are deployed to the `ANALYTICS_###` database._
 - **Development**
-   - Schema: `DBT_JDOE`
+   - Schema: `DBT_AZEIDIEH`
      - One per developer _(first initial, last name)_
 - **Production**
    - Schema: `STAGING`
@@ -63,8 +63,7 @@ _All transformed data models are deployed to the `ANALYTICS_###` database._
       - [Click here](https://docs.getdbt.com/dbt-cli/install/pip#using-virtual-environments) to learn more about using virtual environments w/ dbt, including ways to alias this acticate command.
 
 ### Contributors
-- John Doe (Developer)
-- Jane Doe (Developer)
+- Abdul-Raof Zeidieh (Developer)
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)

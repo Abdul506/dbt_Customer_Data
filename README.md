@@ -10,7 +10,6 @@ _All source data is loaded to the `RAW` database._
 _All transformed data models are deployed to the `ANALYTICS_###` database._
 - **Development**
    - Schema: `DBT_AZEIDIEH`
-     - One per developer _(first initial, last name)_
 - **Production**
    - Schema: `STAGING`
      - 1:1 with each soure-system table

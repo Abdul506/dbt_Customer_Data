@@ -1,5 +1,5 @@
 ## dbt Customer Data Project
-This repository consists of a [dbt](https://www.getdbt.com/) project that transforms raw customer data sources into clear, formatted models for Analytics.
+This repository consists of a [dbt](https://www.getdbt.com/) project that transforms raw customer data into clear, formatted models for Analytics.
 
 ### Sources:
 _All source data is loaded to the `RAW` database._

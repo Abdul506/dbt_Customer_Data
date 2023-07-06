@@ -10,6 +10,16 @@ dbt_training:
       type: snowflake
       user: [username]
       warehouse: developer_wh_000
+    ci:
+      account: [account_url]
+      database: analytics_000
+      password: [password]
+      role: developer_000
+      schema: dbt_ci
+      threads: 4
+      type: snowflake
+      user: [username]
+      warehouse: developer_wh_000
     prod:
       account: [account_url]
       database: analytics_000

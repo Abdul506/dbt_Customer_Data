@@ -3,31 +3,31 @@ dbt_training:
     dev:
       account: yl45797.east-us-2.azure
       database: analytics_106
-      password: apleZC$Fm>l6H9BV
+      password: "{{ env_var('DBT_PASSWORD') }}"
       role: developer_106
       schema: dbt_azeidieh
       threads: 1
       type: snowflake
-      user: student106
+      user: "{{ env_var('DBT_USER') }}"
       warehouse: developer_wh_106
     ci:
       account: yl45797.east-us-2.azure
       database: analytics_106
-      password: apleZC$Fm>l6H9BV
+      password: "{{ env_var('DBT_PASSWORD') }}"
       role: developer_106
       schema: dbt_ci
       threads: 1
       type: snowflake
-      user: student106
+      user: "{{ env_var('DBT_USER') }}"
       warehouse: developer_wh_106
     prod:
       account: yl45797.east-us-2.azure
       database: analytics_106
-      password: apleZC$Fm>l6H9BV
+      password: "{{ env_var('DBT_PASSWORD') }}"
       role: developer_106
       schema: dbt_prod
       threads: 1
       type: snowflake
-      user: student106
+      user: "{{ env_var('DBT_USER') }}"
       warehouse: developer_wh_106
   target: dev

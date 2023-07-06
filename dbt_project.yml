@@ -1,8 +1,8 @@
-name: 'dbt_Customer_Data'
+name: 'dbt_training'
 version: '1.0.0'
 config-version: 2
 
-profile: 'dbt_Customer_Data'
+profile: 'dbt_training'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]

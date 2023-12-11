@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='transaction_id',
+  )
+}}
+
 with
 
 transactions as (
@@ -18,7 +25,7 @@ final as (
         payload:quantity::integer as quantity, 
         payload:tax::numeric(18,2) as tax_in_usd,
         payload:total_charged::numeric(18,2) as total_charged_in_usd,
-        date as created_at
+        timestamp(left(`date`, length(date)-6)) as created_at
 
     from transactions
 

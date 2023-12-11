@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='zip_code_id',
+  )
+}}
+
 with
 
 zip_codes as (

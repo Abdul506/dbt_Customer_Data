@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='state_id',
+  )
+}}
+
 with
 
 states as (

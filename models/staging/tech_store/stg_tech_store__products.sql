@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='product_id',
+  )
+}}
+
 with
 
 products as (

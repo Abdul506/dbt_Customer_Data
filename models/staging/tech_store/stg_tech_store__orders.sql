@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='order_id',
+  )
+}}
+
 with
 
 orders as (
@@ -14,7 +21,7 @@ final as (
         quantity,
         userid as employee_id,
         customerid as customer_id,
-        datetime as created_at,
+        timestamp(left(`datetime`, length(datetime)-6)) as created_at,
         {{ utc_to_est('datetime') }} as created_at_est,
         date(datetime) as created_at_dt
 

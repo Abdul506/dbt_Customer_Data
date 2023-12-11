@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='incremental',
+    unique_key='city_id',
+  )
+}}
+
 with
 
 cities as (
